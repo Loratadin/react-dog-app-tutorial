@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Lakki+Reddy");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img {
+  border: none;
+}
+ol,
+ul {
+  list-style-type: none;
+}
+body {
+  font-family: "Lakki Reddy", cursive;
+  font-size: 14px;
+  color: black;
+  line-height: 1.8;
+}
+@media (min-width: 451px) {
+  body {
+    font-size: 18px;
+  }
+}
+@media (min-width: 769px) {
+  body {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1025px) {
+  body {
+    font-size: 26px;
+  }
+}
