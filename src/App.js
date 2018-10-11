@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
+import BreedImage from './components/breed-image/BreedImage';
+import Select from './components/select/Select';
 
 class App extends Component {
     render() {
         return (
             <div className="App">
                 <div>Menu</div>
-                <div>Select</div>
-                <div>Breed Image</div>
+                <Select/>
+                <BreedImage/>
             </div>
         )
     }
