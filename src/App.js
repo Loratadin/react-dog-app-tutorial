@@ -10,7 +10,7 @@ class App extends Component {
         error: false
     }
    componentDidMount() {
-    this. fetchAllBreeds();
+       this.fetchAllBreeds();
    }
    fetchAllBreeds = async () => {
        try { //try to get data
@@ -34,7 +34,6 @@ class App extends Component {
         }
        }
     render( ) {
-        console.log(this.state.selectedBreed);
         return (
             <div className="App">
                 <Menu/>
