@@ -4,6 +4,9 @@ import '../breed-image/breed-image.css';
 
 const Select = (props) => {
     
+    const handleChange = (event) => {
+        props.onSelect(event.target.value);
+    }
     const getLoadingView = () => {
         return <div className="loading"><img className="loading-gif" alt="Loading..." src={require('../../assets/loading.gif')}/></div>
     }
@@ -12,7 +15,7 @@ const Select = (props) => {
     }
     const getSelectView = () => {
         return (
-            <select>
+            <select onChange={handleChange}>
                 {props.breedsList.map((breed, index) => {
                     return(
                         <option value={breed} key={index}>{breed}</option>

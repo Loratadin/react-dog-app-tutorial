@@ -7,6 +7,7 @@ import BreedImage from './components/breed-image/BreedImage';
 class App extends Component {
     state= {
         breedsList: null,
+        selectedBreed: null,
         error: false
     }
    componentDidMount() {
@@ -33,12 +34,18 @@ class App extends Component {
             alert('Sorry, can not display the data')
         }
        }
+       selectHandler = (breed) => {
+           this.setState({
+               selectedBreed: breed
+           })
+       }
     render( ) {
+        console.log(this.state.selectedBreed);
         return (
             <div className="App">
                 <Menu/>
-                <Select breedsList={this.state.breedsList} isError={this.state.error}/>
-                <BreedImage/>
+                <Select breedsList={this.state.breedsList} onSelect={this.selectHandler} isError={this.state.error}/>
+                <BreedImage breed={this.state.selectedBreed}/>
             </div>
         );
     }
