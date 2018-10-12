@@ -1,0 +1,118 @@
+.menu-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background: rgba(4, 37, 41, 0.85);
+  color: white;
+}
+.menu-logo {
+  width: 150px;
+  margin: 7% auto 0 auto;
+  text-align: center;
+}
+.menu-logo-img {
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+.menu-title {
+  font-size: 20px;
+  text-align: center;
+  margin: 7% auto;
+}
+.menu-github,
+.menu-twitter {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  font-size: 13px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.menu-github:hover,
+.menu-twitter:hover {
+  color: #d4bf91;
+  transform: scale(1.1);
+}
+.menu-container.opened {
+  display: block;
+}
+.burger {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+  display: block;
+  cursor: pointer;
+  border: 1px solid #d4bf91;
+  border-radius: 5px;
+  outline: inherit;
+  background-color: white;
+}
+.lines {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+.line {
+  width: 15px;
+  height: 1px;
+  display: block;
+  background-color: #424242;
+  margin: 3px auto;
+  transition: all 0.3s ease-in-out;
+}
+.burger.is-active .line:nth-child(2) {
+  opacity: 0;
+}
+.burger.is-active .line:nth-child(1) {
+  transform: translateY(4px) rotate(45deg);
+}
+.burger.is-active .line:nth-child(3) {
+  transform: translateY(-4px) rotate(-45deg);
+}
+@media /* desktop */ (min-width: 769px) {
+  .menu-container {
+    display: block;
+    position: absolute;
+    height: 70%;
+    width: 20%;
+    left: 4%;
+    top: 15%;
+    background: rgba(4, 37, 41, 0.35);
+  }
+  .burger {
+    display: none;
+  }
+  .menu-logo {
+    width: 50%;
+  }
+  .menu-github,
+  .menu-twitter {
+    position: absolute;
+    margin-left: 12%;
+  }
+  .menu-github {
+    bottom: 14%;
+  }
+  .menu-twitter {
+    bottom: 7%;
+  }
+}
+@media /* XL desktop */ (min-width: 1025px) {
+  .menu-title {
+    font-size: 30px;
+  }
+  .menu-github,
+  .menu-twitter {
+    font-size: 20px;
+  }
+}
