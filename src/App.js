@@ -29,7 +29,7 @@ class App extends Component {
         }
         } catch (e) { //code will jump here if there is a network problem
             this.setState ({
-                erro: true
+                error: true
             })
             alert('Sorry, can not display the data')
         }
